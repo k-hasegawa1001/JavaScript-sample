@@ -23,12 +23,12 @@ function stopWatch(options) {
   const startButton = document.getElementsByClassName("startButton")[0];
 
   // 取り出したstartButtonに対してクリックイベントのリスナを仕掛ける
-  startButton.addEventListener("click", function () {
+  startButton.addEventListener("click", () => {
     // この行はクリックしたとき呼ばれる
     // console.log("start");
     let seconds = 0;
     if (timer === null) {
-      timer = setInterval(function () {
+      timer = setInterval(() => {
         seconds++;
         displayElm.innerHTML = seconds;
         console.log(seconds);
@@ -45,7 +45,7 @@ function stopWatch(options) {
 
   ///// stopButton
   const stopButton = document.getElementsByClassName("stopButton")[0];
-  stopButton.addEventListener("click", function () {
+  stopButton.addEventListener("click", () => {
     if (timer !== null) {
       console.log("stop:" + timer);
       clearInterval(timer);
