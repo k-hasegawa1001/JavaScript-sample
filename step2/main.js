@@ -1,11 +1,11 @@
-function stopWatch(options) {
-  function addMessage(message) {
+const stopWatch = (options) => {
+  const addMessage = (message) => {
     const messageElm = document.createElement("div");
     const now = new Date();
     messageElm.innerHTML = now.getHours() + "時" + now.getMinutes() + "分" + now.getSeconds() + "秒　" + message;
     messageElm.classList = ["message"];
     logElm.appendChild(messageElm);
-  }
+  };
 
   options = options || {};
   const color = options.color || "lightblue";
@@ -53,7 +53,7 @@ function stopWatch(options) {
       addMessage("終了");
     }
   });
-}
+};
 
 const options = {
   color: "limegreen",
