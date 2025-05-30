@@ -1,4 +1,4 @@
-const stopWatch = (options) => {
+const stopWatch = (options = {}) => {
   const addMessage = (message) => {
     const messageElm = document.createElement("div");
     const now = new Date();
@@ -7,7 +7,7 @@ const stopWatch = (options) => {
     logElm.appendChild(messageElm);
   };
 
-  options = options || {};
+  // options = options || {}; // 引数の初期値として{}を設定しているので、この行は不要
   const color = options.color || "lightblue";
   const backgroundColor = options.backgroundColor || "black";
   const displayElm = document.getElementsByClassName("display")[0];
