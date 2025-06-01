@@ -16,4 +16,6 @@ class PhotoViewer {
     `;
   }
 }
-new PhotoViewer().init();
+
+const images = ["https://fakeimg.pl/250x150/81DAF5", "https://fakeimg.pl/250x150/F781F3", "https://fakeimg.pl/250x150/81F7D8"];
+new PhotoViewer(document.getElementById("photoViewer"), images).init();
