@@ -66,6 +66,9 @@ class PhotoViewer {
   renderImageUrls() {
     const imageElm = this.rootElm.querySelector(".images");
     let imageUrlsHtml = "";
+
+    // for...of と for...in の違いについての記事
+    // https://qiita.com/a05kk/items/d6f49ca5bd15f045ea6c
     for (const image of this.images) {
       imageUrlsHtml += `
             <li>
