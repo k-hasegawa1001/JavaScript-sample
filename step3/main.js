@@ -6,14 +6,37 @@ class PhotoViewer {
   }
 
   init() {
+    const nextButtonElm = this.rootElm.querySelector(".nextButton");
+    nextButtonElm.addEventListener("click", () => {
+      this.next();
+    });
+
+    const prevButtonElm = this.rootElm.querySelector(".prevButton");
+    prevButtonElm.addEventListener("click", () => {
+      this.prev();
+    });
+
+    this.updatePhoto();
+  }
+
+  updatePhoto() {
     const frameElm = this.rootElm.querySelector(".frame");
     const image = this.images[this.currentIndex];
-
     frameElm.innerHTML = `
         <div class="currentImage">
             <img src="${image}" />
         </div>
     `;
+  }
+
+  next() {
+    this.currentIndex++;
+    this.updatePhoto();
+  }
+
+  prev() {
+    this.currentIndex--;
+    this.updatePhoto();
   }
 }
 
