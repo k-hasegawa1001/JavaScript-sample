@@ -21,12 +21,25 @@ class PhotoViewer {
 
   updatePhoto() {
     const frameElm = this.rootElm.querySelector(".frame");
+    const imageIndex = this.currentIndex + 1;
     const image = this.images[this.currentIndex];
     frameElm.innerHTML = `
-        <div class="currentImage">
+        <div>
+            <p>${imageIndex}枚目</p>
             <img src="${image}" />
         </div>
     `;
+    this.startTimer();
+  }
+
+  startTimer() {
+    if (this.timerKey) {
+      clearTimeout(this.timerKey);
+    }
+
+    this.timerKey = setTimeout(() => {
+      this.next();
+    }, 3000);
   }
 
   next() {
