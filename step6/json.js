@@ -4,3 +4,5 @@ const jsonStr = JSON.stringify({
   interest: ["プログラミング", "料理", "読書"],
 });
 console.log(jsonStr);
+const obj = JSON.parse(jsonStr);
+console.log(obj.name);
