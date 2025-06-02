@@ -44,7 +44,7 @@ class StopWatch {
   addMessage = (message) => {
     const messageElm = document.createElement("div");
     const now = new Date();
-    messageElm.innerHTML = now.getHours() + "時" + now.getMinutes() + "分" + now.getSeconds() + "秒　" + message;
+    messageElm.innerText = now.getHours() + "時" + now.getMinutes() + "分" + now.getSeconds() + "秒　" + message;
     messageElm.classList = ["message"];
     this.logElm.appendChild(messageElm);
   };
