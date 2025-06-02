@@ -49,3 +49,18 @@ function funHoisting() {
 
   console.log(myHoistingVar1); // => "変更！"
 }
+
+function blockHoisting() {
+  let myHoistingVar1 = "myHoistingVar1";
+  console.log(myHoistingVar1);
+
+  if (true) {
+    let myHoistingVar1 = "変更！";
+    console.log(myHoistingVar1);
+  }
+
+  // varの時には変更されたが、ブロック変数なので影響を受けない
+  console.log(myHoistingVar1); // => "myHoistingVar1"
+
+  //   let myHoistingVar1 = "重複"; // エラー：同じスコープ内には同名の
+}
