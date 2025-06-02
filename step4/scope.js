@@ -13,3 +13,11 @@ if (true) {
 }
 
 // console.log(myBlockVar2); // エラー：ブロックの外なので利用できない
+
+function funcScope() {
+  var myFuncVar1 = "myFuncVar1"; // これが関数スコープの変数
+  console.log(myFuncVar1);
+}
+
+funcScope();
+// console.log(myFuncVar1); // エラー：関数の外なのでmyFuncVar1は利用できない
