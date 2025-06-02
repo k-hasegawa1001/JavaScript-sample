@@ -21,3 +21,20 @@ function funcScope() {
 
 funcScope();
 // console.log(myFuncVar1); // エラー：関数の外なのでmyFuncVar1は利用できない
+
+// 最上位（関数等で囲まれていない）でのvarはグローバルスコープに変数を宣言する
+var myGlobalVar = "myGlobalVar";
+
+// これもグローバルスコープに変数を宣言
+myGlobalVar1 = "myGlobalVar1";
+
+function myFunction1() {
+  // 関数の中で初めて使ったが、varやconstがついていないのでグローバルスコープ
+  myGlobalVar2 = "myGlobalVar2";
+}
+
+console.log(myGlobalVar1);
+
+// console.log(myGlobalVar2); // まだ宣言していないのでここで呼ぶとエラー
+myFunction1(); // 関数の中でグローバル変数myGlobalVar2が宣言される
+console.log(myGlobalVar2); // ここでmyGlobalVar2は利用できる
