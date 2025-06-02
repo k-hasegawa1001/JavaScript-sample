@@ -37,3 +37,13 @@ const obj2 = {
 
 obj2.test = obj1.test; // obj1の関数の参照をobj2に代入
 obj2.test();
+
+// 何も関数に囲まれていないグローバルスコープのthisはグローバルオブジェクト
+console.log(this === window); // => true
+
+function globalTest() {
+  console.log(this === window); // => true
+}
+
+// オブジェクトに所有されていないのでthisはwindow
+globalTest();
