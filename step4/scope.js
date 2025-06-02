@@ -38,3 +38,14 @@ console.log(myGlobalVar1);
 // console.log(myGlobalVar2); // まだ宣言していないのでここで呼ぶとエラー
 myFunction1(); // 関数の中でグローバル変数myGlobalVar2が宣言される
 console.log(myGlobalVar2); // ここでmyGlobalVar2は利用できる
+
+function funHoisting() {
+  var myHoistingVar1 = "myHoistingVar1";
+  console.log(myHoistingVar1);
+  if (true) {
+    var myHoistingVar1 = "変更！";
+    console.log(myHoistingVar1);
+  }
+
+  console.log(myHoistingVar1); // => "変更！"
+}
