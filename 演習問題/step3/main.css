@@ -1,0 +1,32 @@
+#photoViewer {
+  margin: 0 auto;
+  width: 20em;
+}
+
+#photoViewer2 {
+  margin: 0 auto;
+  width: 20em;
+}
+
+.actions {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.currentImage {
+  text-align: center;
+}
+
+.images {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+img {
+  width: 250px;
+}
+
+.leftItem {
+  text-align: left;
+}
