@@ -21,3 +21,7 @@
 img {
   width: 50%;
 }
+
+.leftItem {
+  text-align: left;
+}

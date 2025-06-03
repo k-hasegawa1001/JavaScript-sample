@@ -25,8 +25,8 @@ class PhotoViewer {
     const imageIndex = this.currentIndex + 1;
     const image = this.images[this.currentIndex];
     frameElm.innerHTML = `
-        <div>
-            <p>${imageIndex}枚目</p>
+        <div class="currentImage">
+            <p class="leftItem">${imageIndex}枚目</p>
             <img src="${image}" />
         </div>
     `;
