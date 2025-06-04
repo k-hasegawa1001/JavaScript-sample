@@ -33,3 +33,14 @@ testStr1 = testStr1.concat("World");
 
 // 以下の二つは違う値を示している
 console.log(testStr1, testStr2); // => HelloWorld Hello
+
+const testDate1 = new Date();
+const testDate2 = testDate1;
+
+// 時刻は実行した時の時刻が表示される
+console.log(testDate1, testDate2); // => ${実行時の時間}
+
+testDate1.setFullYear(11223);
+
+// 以下の二つは同じ値を示している
+console.log(testDate1, testDate2); // => ${実行時の時間（年だけ11223年）}
