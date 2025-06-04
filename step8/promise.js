@@ -69,3 +69,9 @@ async function displayMessage() {
     console.log(`displayMessageの処理中にエラーが発生しました：${err.message}`);
   }
 }
+
+// async指定がされた関数は戻り値が必ずPromiseになる
+// したがって、displayMessageも以下のようにthenをつなげてコードを書ける
+displayMessage().then(() => {
+  console.log("displayMessageが終わりました");
+});
