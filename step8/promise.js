@@ -35,3 +35,7 @@ function displayMessagePromise() {
       console.log("終了");
     });
 }
+
+displayMessagePromise().then(() => {
+  console.log("displayMessageが終わりました");
+});
