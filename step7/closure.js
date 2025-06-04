@@ -31,3 +31,26 @@ counterObj.up();
 counterObj.value = 10;
 counterObj.down();
 console.log(counterObj.value); // => 9
+
+function createCounter() {
+  // この値は外からいじることができない
+  let value = 0;
+  return {
+    up: function () {
+      value++;
+    },
+    down: function () {
+      value--;
+    },
+    getValue: function () {
+      return value;
+    },
+  };
+}
+
+const counter = createCounter();
+counter.up();
+counter.up();
+counter.down();
+// counter.value = 10; // valueは公開されていないので、この操作では想定のvalueを変更できない
+console.log(counter.getValue()); // => 1
