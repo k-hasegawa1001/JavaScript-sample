@@ -57,3 +57,15 @@ function displayMessagePromise() {
       console.log(`displayMessagePromiseの処理中にエラーが発生しました：${err.message}`);
     });
 }
+
+async function displayMessage() {
+  try {
+    const response = await fetch("./hello.json");
+    const data = await response.json();
+    const messageElm = document.getElementById("message");
+    messageElm.innerHTML = data.message;
+    console.log("終了");
+  } catch (err) {
+    console.log(`displayMessageの処理中にエラーが発生しました：${err.message}`);
+  }
+}
