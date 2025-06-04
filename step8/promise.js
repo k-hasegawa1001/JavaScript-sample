@@ -39,3 +39,21 @@ function displayMessagePromise() {
 displayMessagePromise().then(() => {
   console.log("displayMessageが終わりました");
 });
+
+// 最近ではthenの第二引数処理を使わずに、catch関数を利用することが多い
+function displayMessagePromise() {
+  return fetch("./hello.json")
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      const messageElm = document.getElementById("message");
+      messageElm.innerHTML = data.message;
+      // 例えば以下のように例外が発生してもcatch関数で捕まえられる
+      // throw new Error("テストエラー");
+      console.log("終了");
+    })
+    .catch((err) => {
+      console.log(`displayMessagePromiseの処理中にエラーが発生しました：${err.message}`);
+    });
+}
