@@ -10,3 +10,24 @@ function createClosure() {
 
 const closure = createClosure();
 closure();
+
+function createCounterObject() {
+  return {
+    value: 0,
+    up: function () {
+      // 値を一つ増やす関数
+      this.value++;
+    },
+    down: function () {
+      // 値を一つ減らす関数
+      this.value--;
+    },
+  };
+}
+
+const counterObj = createCounterObject();
+counterObj.up();
+counterObj.up();
+counterObj.value = 10;
+counterObj.down();
+console.log(counterObj.value); // => 9
