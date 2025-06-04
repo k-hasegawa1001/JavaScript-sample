@@ -25,3 +25,11 @@ console.log(`typeof null: ${typeNull}`); // => typeof null: object
 // Date 日時
 const typeDate = typeof new Date();
 console.log(`typeof new Date(): ${typeDate}`); // => typeof new Date: object
+
+let testStr1 = "Hello";
+const testStr2 = testStr1;
+console.log(testStr1, testStr2); // => Hello Hello
+testStr1 = testStr1.concat("World");
+
+// 以下の二つは違う値を示している
+console.log(testStr1, testStr2); // => HelloWorld Hello
