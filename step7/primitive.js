@@ -21,3 +21,7 @@ console.log(`typeof Symbol("test"): ${typeSymbol}`); // => typeof Symbol("test")
 // Null
 const typeNull = typeof null;
 console.log(`typeof null: ${typeNull}`); // => typeof null: object
+
+// Date 日時
+const typeDate = typeof new Date();
+console.log(`typeof new Date(): ${typeDate}`); // => typeof new Date: object
