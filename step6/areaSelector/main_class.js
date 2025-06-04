@@ -28,7 +28,7 @@ class AreaSelector {
   }
 
   async updateCity() {
-    this.cities = await this.getCities(prefSelectorElm.value);
+    this.cities = await this.getCities(this.prefCode);
     this.createCityOptionsHtml();
   }
 
