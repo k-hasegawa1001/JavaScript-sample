@@ -1,0 +1,22 @@
+div {
+  text-align: center;
+}
+
+#todoList {
+  text-align: center;
+  border: 10px;
+  border-color: darkgrey;
+}
+
+ul {
+  border: 5px;
+}
+
+.list {
+  width: 50%;
+  padding: 0 auto;
+}
+
+li {
+  text-align: left;
+}
