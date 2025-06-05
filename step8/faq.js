@@ -1,0 +1,18 @@
+function wait(sec) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(`${sec}秒たちました`);
+      // もしも失敗する時には以下のように呼ぶと失敗を知らされる
+      // reject(new Error("エラーです"));
+    }, sec * 1000);
+  });
+}
+
+wait(3)
+  .then((msg) => {
+    // ここは3秒後にコールされる
+    console.log(msg); // => 3秒たちました
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });
