@@ -26,8 +26,8 @@ async function wait3sec() {
 async function waitMultiple() {
   const promises = [wait(3), wait(5)];
 
-  const message = await Promise.all(promises);
-  console.log(message);
+  const messages = await Promise.all(promises);
+  console.log(messages);
 }
 
 waitMultiple();
