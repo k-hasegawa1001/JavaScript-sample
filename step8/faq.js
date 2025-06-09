@@ -16,3 +16,9 @@ wait(3)
   .catch((err) => {
     console.log(err.message);
   });
+
+async function wait3sec() {
+  const msg = await wait(3);
+  // 3秒後に下記が実行される
+  console.log(msg); // => 3秒たちました
+}
