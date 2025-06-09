@@ -1,6 +1,5 @@
 class WordQuiz {
   constructor(rootElm) {
-    // console.log("インスタンスが作成されたよ"); // 削除
     this.rootElm = rootElm;
   }
 
@@ -40,9 +39,23 @@ class WordQuiz {
 
     const startBtnElm = parentElm.querySelector(".startBtn");
     startBtnElm.addEventListener("click", () => {
-      console.log("スタートボタンがクリックされました。");
+      // console.log("スタートボタンがクリックされました。"); // 削除
+      this.displayQuestionView();
     });
 
+    this.rootElm.appendChild(parentElm);
+  }
+
+  displayQuestionView() {
+    const html = `
+      <p>ゲームを開始しました</p>
+    `;
+
+    const parentElm = document.createElement("div");
+    parentElm.className = "question";
+    parentElm.innerHTML = html;
+
+    this.rootElm.innerHTML = "";
     this.rootElm.appendChild(parentElm);
   }
 }
