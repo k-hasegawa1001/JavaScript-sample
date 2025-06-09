@@ -32,10 +32,16 @@ class WordQuiz {
       <select class="levelSelector">
         ${optionStrs.join("")}
       </select>
+      <button class="startBtn">スタート</button>
     `;
 
     const parentElm = document.createElement("div");
     parentElm.innerHTML = html;
+
+    const startBtnElm = parentElm.querySelector(".startBtn");
+    startBtnElm.addEventListener("click", () => {
+      console.log("スタートボタンがクリックされました。");
+    });
 
     this.rootElm.appendChild(parentElm);
   }
