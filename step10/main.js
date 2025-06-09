@@ -76,7 +76,7 @@ class WordQuiz {
     parentElm.className = "results";
     parentElm.innerHTML = html;
 
-    const resetBtnElm = parentElm.querySelector(".restBtn");
+    const resetBtnElm = parentElm.querySelector(".resetBtn");
     resetBtnElm.addEventListener("click", () => {
       this.displayStartView();
     });
