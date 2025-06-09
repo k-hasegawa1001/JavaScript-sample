@@ -22,3 +22,12 @@ async function wait3sec() {
   // 3秒後に下記が実行される
   console.log(msg); // => 3秒たちました
 }
+
+async function waitMultiple() {
+  const promises = [wait(3), wait(5)];
+
+  const message = await Promise.all(promises);
+  console.log(message);
+}
+
+waitMultiple();
