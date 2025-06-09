@@ -1,6 +1,11 @@
 class WordQuiz {
   constructor(rootElm) {
     this.rootElm = rootElm;
+
+    // ゲームのステータス
+    this.gameStatus = {
+      level: null, // 選択されたレベル
+    };
   }
 
   async init() {
