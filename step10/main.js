@@ -15,4 +15,4 @@ class WordQuiz {
     }
   }
 }
-new WordQuiz().init();
+new WordQuiz(document.getElementById("app")).init();
