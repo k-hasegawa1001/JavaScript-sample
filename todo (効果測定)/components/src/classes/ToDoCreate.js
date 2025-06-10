@@ -19,7 +19,9 @@ export class ToDoCreate extends ToDo {
     this.createToDoElm = document.createElement("div");
     this.createToDoElm.id = "createToDo";
 
+    // debug
     const debugMessage = "here is element : id=createToDo<br>";
+    // /debug
     const titleHtml = "<h2>新規作成</h2>";
     const returnListHtml = `
             <div class='leftItem'>
@@ -34,7 +36,7 @@ export class ToDoCreate extends ToDo {
                 <button class="createButton">作成する</button>
             </div>
         `;
-    this.createToDoElm.innerHTML = debugMessage + titleHtml + formHtml + returnListHtml;
+    this.createToDoElm.innerHTML = titleHtml + formHtml + returnListHtml;
     // this.rootElm はおそらく ToDoクラスかMainクラスで定義されているものと思われます
     // document.body.appendChild(this.createToDoElm);
     this.rootElm.appendChild(this.createToDoElm);

@@ -22,7 +22,7 @@ export class ToDoList extends ToDo {
 
     let createToDoButton = "<button id='createToDoButton'>新規作成</button>";
 
-    this.listElm.innerHTML = debugMessage + createToDoButton + "<ul class='list'></ul>";
+    this.listElm.innerHTML = createToDoButton + "<ul class='list'></ul>";
 
     this.rootElm.appendChild(this.listElm);
 
