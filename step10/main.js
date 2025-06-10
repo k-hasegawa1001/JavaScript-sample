@@ -5,6 +5,7 @@ class WordQuiz {
     // ゲームのステータス
     this.gameStatus = {
       level: null, // 選択されたレベル
+      step: 1, // 現在表示している設問の番号
     };
   }
 
@@ -82,11 +83,6 @@ class WordQuiz {
     const parentElm = document.createElement("div");
     parentElm.className = "question";
     parentElm.innerHTML = html;
-
-    // const retireBtnElm = parentElm.querySelector(".retireBtn"); // 削除
-    // retireBtnElm.addEventListener("click", () => {
-    //   this.displayResultView();
-    // });
 
     this.replaceView(parentElm);
   }
