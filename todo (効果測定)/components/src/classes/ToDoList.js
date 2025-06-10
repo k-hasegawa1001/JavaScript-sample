@@ -97,7 +97,9 @@ export class ToDoList extends ToDo {
 
       // ★ ここがイベントリスナーの設定箇所です ★
       checkbox.addEventListener("change", () => {
-        todo.isFinished = true; // ToDoオブジェクトの状態を更新
+        if ((todo.isFinished = true)) todo.isFinished = false;
+        else todo.isFinished = true;
+
         this.saveTodos(); // データ変更後に保存
         // renderTodos(); // UIを再描画して変更を反映
       });
@@ -114,17 +116,17 @@ export class ToDoList extends ToDo {
         span.style.color = "#333"; // 通常の色（例: 濃いグレー）
       }
 
-      const deleteButton = document.createElement("button");
-      deleteButton.textContent = "削除";
-      deleteButton.addEventListener("click", () => {
-        todos = todos.filter((t) => t.id !== todo.id);
-        saveTodos(); // データ変更後に保存
-        renderTodos();
-      });
+      // const deleteButton = document.createElement("button");
+      // deleteButton.textContent = "削除";
+      // deleteButton.addEventListener("click", () => {
+      //   todos = todos.filter((t) => t.id !== todo.id);
+      //   saveTodos(); // データ変更後に保存
+      //   renderTodos();
+      // });
 
       listItem.appendChild(checkbox);
       listItem.appendChild(span);
-      listItem.appendChild(deleteButton);
+      // listItem.appendChild(deleteButton);
       this.listElm.appendChild(listItem);
     });
 
