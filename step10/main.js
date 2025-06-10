@@ -1,12 +1,9 @@
 class WordQuiz {
   constructor(rootElm) {
     this.rootElm = rootElm;
-
     // ゲームのステータス
-    this.gameStatus = {
-      level: null, // 選択されたレベル
-      step: 1, // 現在表示している設問の番号
-    };
+    this.gameStatus = {};
+    this.resetGame();
   }
 
   async init() {
@@ -36,6 +33,11 @@ class WordQuiz {
       this.gameStatus.step++;
       this.displayQuestionView();
     }
+  }
+
+  resetGame() {
+    this.gameStatus.level = null; // 選択されたレベル
+    this.gameStatus.step = 1; // 現在表示している設問の番号
   }
 
   displayStartView() {
@@ -91,7 +93,7 @@ class WordQuiz {
         ${choiceStrs.join("")}
       </div>
       <div class="actions">
-        <button class="nextBtn">解凍する</button>
+        <button class="nextBtn">解答する</button>
       </div>
     `;
 
@@ -119,7 +121,9 @@ class WordQuiz {
 
     const resetBtnElm = parentElm.querySelector(".resetBtn");
     resetBtnElm.addEventListener("click", () => {
+      this.resetGame();
       this.displayStartView();
+      0;
     });
 
     this.replaceView(parentElm);
