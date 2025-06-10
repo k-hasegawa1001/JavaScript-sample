@@ -2,56 +2,16 @@
   {
     "id": 1,
     "content": "test",
-    "isFinished": true
+    "isFinished": false
   },
   {
     "id": 2,
-    "content": "test2",
-    "isFinished": true
+    "content": "TODOリストのバグを治す",
+    "isFinished": false
   },
   {
     "id": 3,
-    "content": "test3",
-    "isFinished": true
-  },
-  {
-    "id": 4,
-    "content": "ｔｅｓｔｔｅｓｔ",
+    "content": "add test",
     "isFinished": false
-  },
-  {
-    "id": 5,
-    "content": "rwhgv",
-    "isFinished": false
-  },
-  {
-    "id": 6,
-    "content": "ｐｇｖ",
-    "isFinished": false
-  },
-  {
-    "id": 7,
-    "content": "hsodngv",
-    "isFinished": false
-  },
-  {
-    "id": 8,
-    "content": "このTODOリストを完成させる",
-    "isFinished": true
-  },
-  {
-    "id": 9,
-    "content": "削除ボタンを非表示にする",
-    "isFinished": false
-  },
-  {
-    "id": 10,
-    "content": "test",
-    "isFinished": true
-  },
-  {
-    "id": 11,
-    "content": "nfdlb",
-    "isFinished": true
   }
 ]

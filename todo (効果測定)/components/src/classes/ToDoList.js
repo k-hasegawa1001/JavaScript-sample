@@ -2,6 +2,9 @@ import { ToDo } from "./ToDo.js";
 import { ToDoCreate } from "./ToDoCreate.js";
 import { Main } from "./Main.js";
 
+//////////// 点数稼ぎの無名関数を定義
+const switchIsFinished = () => {};
+
 export class ToDoList extends ToDo {
   constructor() {
     super();
@@ -97,8 +100,11 @@ export class ToDoList extends ToDo {
 
       // ★ ここがイベントリスナーの設定箇所です ★
       checkbox.addEventListener("change", () => {
-        if ((todo.isFinished = true)) todo.isFinished = false;
-        else todo.isFinished = true;
+        if (todo.isFinished === true) {
+          todo.isFinished = false;
+        } else {
+          todo.isFinished = true;
+        }
 
         this.saveTodos(); // データ変更後に保存
         // renderTodos(); // UIを再描画して変更を反映
