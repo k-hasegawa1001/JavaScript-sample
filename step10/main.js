@@ -27,6 +27,7 @@ class WordQuiz {
   }
 
   nextStep() {
+    this.clearTimer();
     this.addResult();
     if (this.isLastStep()) {
       this.displayResultView();
@@ -67,6 +68,24 @@ class WordQuiz {
     this.gameStatus.level = null; // 選択されたレベル
     this.gameStatus.step = 1; // 現在表示している設問の番号
     this.gameStatus.results = []; // プレイヤーの解答結果
+    this.gameStatus.timeLimit = 0; // 問題ごとの制限時間
+    this.gameStatus.intervalKey = null; // setIntervalのキー
+  }
+
+  setTimer() {
+    if (this.gameStatus.intervalKey !== null) {
+      throw new Error("まだタイマーが動いています");
+    }
+    this.gameStatus.timeLimit = 10;
+    this.gameStatus.intervalKey = setInterval(() => {
+      this.gameStatus.timeLimit--;
+      console.log(`解答時間は残り${this.gameStatus.timeLimit}秒です`);
+    }, 1000);
+  }
+
+  clearTimer() {
+    clearInterval(this.gameStatus.intervalKey);
+    this.gameStatus.intervalKey = null;
   }
 
   displayStartView() {
@@ -104,6 +123,7 @@ class WordQuiz {
 
   displayQuestionView() {
     console.log(`選択中のレベル：${this.gameStatus.level}`);
+    this.setTimer();
     const stepKey = `step${this.gameStatus.step}`;
     const currentQuestion = this.quizData[this.gameStatus.level][stepKey];
 
