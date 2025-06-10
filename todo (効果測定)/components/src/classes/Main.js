@@ -1,5 +1,5 @@
 import { ToDoCreate } from "./ToDoCreate.js";
-import { ToDoListRef } from "./ToDoListRef.js";
+import { ToDoList } from "./ToDoList.js";
 
 export class Main {
   constructor() {
@@ -8,7 +8,7 @@ export class Main {
 
   init() {
     console.log("Main : init()");
-    const todoList = new ToDoListRef();
+    const todoList = new ToDoList();
     todoList.init();
   }
 }

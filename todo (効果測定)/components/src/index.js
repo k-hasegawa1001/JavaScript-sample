@@ -27,8 +27,8 @@ const MainJsFilePath = path.join(projectRoot, "components", "src", "classes", "M
 const ToDoJsFilePath = path.join(projectRoot, "components", "src", "classes", "ToDo.js");
 // components/src/classes/ToDoCreate.js
 const ToDoCreateJsFilePath = path.join(projectRoot, "components", "src", "classes", "ToDoCreate.js");
-// components/src/classes/ToDoListRef.js
-const ToDoListRefJsFilePath = path.join(projectRoot, "components", "src", "classes", "ToDoListRef.js");
+// components/src/classes/ToDoList.js
+const ToDoListJsFilePath = path.join(projectRoot, "components", "src", "classes", "ToDoList.js");
 
 // JSONファイルのパス (todo/json/todo.json)
 const todoJsonFilePath = path.join(projectRoot, "json", "todo.json");
@@ -44,7 +44,7 @@ const fileMap = {
   "/src/classes/Main.js": { path: MainJsFilePath, contentType: "application/javascript" },
   "/src/classes/ToDo.js": { path: ToDoJsFilePath, contentType: "application/javascript" },
   "/src/classes/ToDoCreate.js": { path: ToDoCreateJsFilePath, contentType: "application/javascript" },
-  "/src/classes/ToDoListRef.js": { path: ToDoListRefJsFilePath, contentType: "application/javascript" },
+  "/src/classes/ToDoList.js": { path: ToDoListJsFilePath, contentType: "application/javascript" },
   "/json/todo.json": { path: todoJsonFilePath, contentType: "application/json" },
 };
 

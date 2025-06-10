@@ -2,7 +2,7 @@
 
 import { Main } from "./Main.js";
 import { ToDo } from "./ToDo.js";
-import { ToDoListRef } from "./ToDoListRef.js";
+import { ToDoList } from "./ToDoList.js";
 
 // const fs = require("node:fs"); // ★この行は削除またはコメントアウト！★
 
