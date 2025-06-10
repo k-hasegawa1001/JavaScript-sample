@@ -72,7 +72,7 @@ class WordQuiz {
     const html = `
       <p>${currentQuestion.word}</p>
       <div>
-        ${choiceStrs.join}
+        ${choiceStrs.join("")}
       </div>
       <div class="actions">
         <button class="nextBtn">解凍する</button>
