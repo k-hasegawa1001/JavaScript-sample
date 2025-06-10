@@ -24,6 +24,11 @@ class WordQuiz {
     }
   }
 
+  nextStep() {
+    this.gameStatus.step++;
+    this.displayQuestionView();
+  }
+
   displayStartView() {
     const levelStrs = Object.keys(this.quizData);
     this.gameStatus.level = levelStrs[0];
@@ -59,7 +64,7 @@ class WordQuiz {
 
   displayQuestionView() {
     console.log(`選択中のレベル：${this.gameStatus.level}`);
-    const stepKey = "step1";
+    const stepKey = `step${this.gameStatus.step}`;
     const currentQuestion = this.quizData[this.gameStatus.level][stepKey];
 
     const choiceStrs = [];
@@ -83,6 +88,11 @@ class WordQuiz {
     const parentElm = document.createElement("div");
     parentElm.className = "question";
     parentElm.innerHTML = html;
+
+    const nextBtnElm = parentElm.querySelector(".nextBtn");
+    nextBtnElm.addEventListener("click", () => {
+      this.nextStep();
+    });
 
     this.replaceView(parentElm);
   }
