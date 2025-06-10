@@ -130,8 +130,11 @@ export class ToDoList extends ToDo {
       //   renderTodos();
       // });
 
-      listItem.appendChild(checkbox);
-      listItem.appendChild(span);
+      const labelElm = document.createElement("label");
+
+      listItem.appendChild(labelElm);
+      labelElm.appendChild(checkbox);
+      labelElm.appendChild(span);
       // listItem.appendChild(deleteButton);
       this.listElm.appendChild(listItem);
     });
