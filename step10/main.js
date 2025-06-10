@@ -24,9 +24,18 @@ class WordQuiz {
     }
   }
 
+  isLastStep() {
+    const currentQuestions = this.quizData[this.gameStatus.level];
+    return this.gameStatus.step === Object.keys(currentQuestions).length;
+  }
+
   nextStep() {
-    this.gameStatus.step++;
-    this.displayQuestionView();
+    if (this.isLastStep()) {
+      this.displayResultView();
+    } else {
+      this.gameStatus.step++;
+      this.displayQuestionView();
+    }
   }
 
   displayStartView() {
@@ -72,7 +81,8 @@ class WordQuiz {
       choiceStrs.push(`
           <label>
             <input type="radio" name="choice" value="${choice}" />${choice}
-          </label>
+          
+            </label>
         `);
     }
     const html = `
