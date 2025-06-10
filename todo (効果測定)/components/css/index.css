@@ -1,9 +1,4 @@
-div {
-  text-align: center;
-}
-
 #todoList {
-  text-align: center;
   border: 10px;
   border-color: darkgrey;
 }
@@ -19,4 +14,23 @@ ul {
 
 li {
   text-align: left;
+}
+
+.centerItem {
+  text-align: center;
+}
+.leftItem {
+  text-align: left;
+}
+.rightItem {
+  text-align: right;
+}
+
+textarea {
+  width: 270px;
+  height: 160px;
+}
+
+.gray {
+  color: darkgray;
 }
